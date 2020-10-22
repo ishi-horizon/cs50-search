@@ -1,0 +1,337 @@
+html{
+    height: 100%;
+    min-height: 100%;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+}
+/*Top navigation bar for both pages main search and image search*/
+#topNav {
+    display: grid;
+    grid-template-columns: 50px 50px 1fr 50px 50px 60px;
+    grid-template-rows: 50px;
+    padding: 10px;
+    grid-template-areas: 
+    "about store . mail images apps signin";
+}
+a, p{
+    text-decoration: none;
+    color: rgba(0, 0, 0,0.9);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+#about{
+    grid-area: about;
+    justify-self: center;
+    align-self: center;
+}
+#store{
+    grid-area: store;
+    justify-self: center;
+    align-self: center;
+}
+#mail{
+    grid-area: mail;
+    justify-self: center;
+    align-self: center;
+}
+#images{
+    grid-area: images;
+    justify-self: center;
+    align-self: center;
+
+}
+#apps{
+    grid-area: apps;
+    justify-self: center;
+    align-self: center;
+
+}
+#signin{
+    grid-area: signin;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.nav:hover{
+    text-decoration: underline;
+}
+#mainsearch {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 70px 80px 415px;    
+    grid-template-areas: 
+    ". logo ."
+    ". searchtext ."
+    ". flexbox ."
+    ". googletxtlang .";
+}
+#imagesearch{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 80px 80px 405px;    
+    grid-template-areas: 
+    ". logo ."
+    ". imagesearchtext ."
+    ". googletxtlang .";
+}
+/*text area for image search page*/
+#imagesearchtext{
+    grid-area: imagesearchtext;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 40px;
+    padding-left: 30px;
+    align-self: center;
+    outline: 0;
+    width: 550px;
+    border-radius: 30px;
+    border: 1px solid #c7c2c2;
+    justify-self: center;
+    background-image: url('camera-logo.png');
+    background-position: right 20px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;  
+    font-size: 18px;
+}
+#backtomainpage{
+    justify-self: center;
+    align-self: center;
+}
+#logo{
+  grid-area: logo;
+  justify-self: center;
+  align-self: end;  
+}
+
+.logo-subtext{
+    color: #4285f4;
+    font: 16px/16px roboto-regular, arial, sans-serif;
+    left: 1045px;
+    position: relative;
+    top: 240px;
+    white-space: nowrap;
+}
+/*Main google Search text area for user to type query*/
+#searchtext{
+    grid-area: searchtext;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 40px;
+    padding-left: 50px;
+    align-self: center;
+    outline: 0;
+    width: 550px;
+    border-radius: 30px;
+    border: 1px solid #c7c2c2;
+    justify-self: center;
+    background-color: white;
+    background-image: url('magnifying-glass.jpg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    font-size: 18px;
+    
+}
+#searchtext:hover{
+    box-shadow: 0 0 5px rgba(202, 199, 199, 0.9);
+}
+
+/*Button in a row with hover effect*/
+#flexbox {
+    display: flex;
+    grid-area: flexbox;
+    align-self: center;
+    justify-self: center;   
+}
+#btnsearch
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background:  rgb(239, 239, 243);  
+    border: rgba(104, 100, 100, 0.9); 
+    color: rgba(78, 73, 73, 0.9);
+    font-size: 15px;
+}
+#btnsearch:hover{
+    box-shadow: 0 0 5px rgba(204, 197, 197, 0.9);
+    border:1px solid rgba(196, 191, 191, 0.9);
+
+}
+#btnlucky
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgb(239, 239, 243);
+    border: rgba(216, 209, 209, 0.9); 
+    color: rgba(78, 73, 73, 0.9);
+    font-size: 15px;
+}
+#btnlucky:hover{
+    box-shadow: 0 0 5px  rgba(204, 197, 197, 0.9);
+    border: 1px solid  rgba(196, 191, 191, 0.9);
+}
+#googletxtlang
+{
+    grid-area: googletxtlang;
+    justify-self: center;
+    color: rgb(16, 50, 151);
+}
+
+/*Footer common to main and image search page*/
+#footer{
+    display: grid;
+    background-color: rgba(241, 236, 236, 0.9);
+    grid-template-columns: 100px 100px 150px 1fr 80px 80px 80px;
+    
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "adv business srch . privacy terms settings";   
+
+}
+
+#adv{
+    grid-area: adv ;
+    justify-self: center;
+    align-self: center;
+}
+#business{
+    grid-area: business ;
+    justify-self: center;
+    align-self: center;
+}
+#srch{
+    grid-area: srch ;
+    justify-self: center;
+    align-self: center;
+}
+#privacy{
+    grid-area: privacy ;
+    justify-self: center;
+    align-self: center;
+}
+#terms{
+    grid-area: terms ;
+    justify-self: center;
+    align-self: center;
+}
+#settings{
+    grid-area: settings;
+    justify-self: center;
+    align-self: center;
+}
+
+
+/* Top Nav for Advance search Page*/
+#advbacktomainpage{
+    size: 10px 10px;
+    padding-left: 15px;
+}
+#advtopNav{
+    display: grid;
+    grid-template-columns: 250px 1fr 50px 60px;
+    background-color: #f1f1f1;
+    grid-template-rows: 30px;
+    padding: 15px;
+    grid-template-areas: 
+    "advbacktomainpage . apps signin"   
+}
+
+input[type=text] , select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+input[type=text]:focus{
+    background-color: white;
+    outline: 0.5px solid rgb(63, 63, 238);
+}
+ label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  .col-advtxt {
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+    margin-left: 25px;
+}
+  
+  .col-advtextbox {
+    float: left;
+    width: 35%;
+    margin-top: 6px;
+  }
+  .row-advtxt:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+ 
+  
+  input[type=submit] {
+    background-color: #4d90fe;
+    color:white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 45.5%;
+    margin-top: 10px;
+  }
+
+input[type=submit]:hover {
+    background-color: #306cce;
+  }
+
+
+
+/*Advance search app bar*/
+#advtitle{
+    color: #d93025;
+    font-size: 20px;
+    margin: 15px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/*Responsive Advance search page footer*/
+#advfooter{
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    line-height: 40px;
+    min-width: 1261px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#advhelp{
+    padding-left: 15px;
+    justify-self: right;
+
+}
+#advprivacy{
+    padding-left: 15px;
+    justify-self: right;
+
+}
+#advterms{
+    padding-left: 20px;
+    justify-self: right;
+}
